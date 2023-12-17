@@ -285,9 +285,7 @@
       if (this.parent instanceof Player) {
         const enemy = enemies.collisionWith(this.x, this.y, this.radius);
 
-        if (enemy) {
-          enemies.kill(enemy);
-        }
+        enemy?.kill();
       }
 
       if (this.parent instanceof Enemy) {
@@ -583,6 +581,8 @@
       this.playersLastSeenDirTimer = 0;
       this.canShoot = true;
       this.canShootTimer = 0;
+      this.isDying = false;
+      this.isDyingTimer = 0;
       /** @type {Bullet[]} */
       this.bullets = [];
     }
@@ -593,6 +593,10 @@
      * @param {number} radius
      */
     collisionWith(x, y, radius) {
+      if (this.isDying) {
+        return;
+      }
+
       const a = x - this.x;
       const b = y - this.y;
       const c = Math.sqrt(a * a + b * b);
@@ -777,6 +781,10 @@
       return spottingPlayer;
     }
 
+    kill() {
+      this.isDying = true;
+    }
+
     shoot() {
       if (!this.canShoot || (this.xVel === 0 && this.yVel === 0)) {
         return;
@@ -792,32 +800,34 @@
         return;
       }
 
-      this.evaluatingNextDir();
+      if (!this.isDying) {
+        this.evaluatingNextDir();
 
-      if (this.changingDirWhenSpottingPlayer()) {
-        this.shoot();
-      }
+        if (this.changingDirWhenSpottingPlayer()) {
+          this.shoot();
+        }
 
-      if (map.collisionWith(...this.rect(this.xVel * this.speed * dt, 0))) {
-        this.x = Math.floor(this.x / TILE_SIZE) * TILE_SIZE + this.radius;
-        this.xVel = 0;
-      }
+        if (map.collisionWith(...this.rect(this.xVel * this.speed * dt, 0))) {
+          this.x = Math.floor(this.x / TILE_SIZE) * TILE_SIZE + this.radius;
+          this.xVel = 0;
+        }
 
-      if (map.collisionWith(...this.rect(0, this.yVel * this.speed * dt))) {
-        this.y = Math.floor(this.y / TILE_SIZE) * TILE_SIZE + this.radius;
-        this.yVel = 0;
-      }
+        if (map.collisionWith(...this.rect(0, this.yVel * this.speed * dt))) {
+          this.y = Math.floor(this.y / TILE_SIZE) * TILE_SIZE + this.radius;
+          this.yVel = 0;
+        }
 
-      if (player.collisionWith(this.x, this.y, this.radius)) {
-        player.takeLife();
-      }
+        if (player.collisionWith(this.x, this.y, this.radius)) {
+          player.takeLife();
+        }
 
-      const moveX = this.xVel * this.speed * dt;
-      const moveY = this.yVel * this.speed * dt;
+        const moveX = this.xVel * this.speed * dt;
+        const moveY = this.yVel * this.speed * dt;
 
-      if (Math.abs(moveX) < TILE_SIZE && Math.abs(moveY) < TILE_SIZE) {
-        this.x += moveX;
-        this.y += moveY;
+        if (Math.abs(moveX) < TILE_SIZE && Math.abs(moveY) < TILE_SIZE) {
+          this.x += moveX;
+          this.y += moveY;
+        }
       }
 
       if (!this.canShoot) {
@@ -829,21 +839,30 @@
         }
       }
 
+      if (this.isDying) {
+        this.isDyingTimer += dt;
+
+        if (this.isDyingTimer > 1) {
+          this.isDying = false;
+          this.isDyingTimer = 0;
+
+          enemies.kill(this);
+        }
+      }
+
       for (const bullet of this.bullets) {
         bullet.update();
       }
     }
 
     draw() {
+      const endAngle = this.isDying
+        ? Math.PI * 2 - Math.PI * 2 * this.isDyingTimer
+        : Math.PI * 2;
+
       ctx.fillStyle = "#f00";
       ctx.beginPath();
-      ctx.arc(
-        this.x - camera.x,
-        this.y - camera.y,
-        this.radius,
-        0,
-        Math.PI * 2
-      );
+      ctx.arc(this.x - camera.x, this.y - camera.y, this.radius, 0, endAngle);
       ctx.fill();
 
       ctx.fillStyle = "#fff";
@@ -853,7 +872,7 @@
         this.y + (this.radius / 3) * this.yVel - camera.y,
         this.radius / 4,
         0,
-        Math.PI * 2
+        endAngle
       );
       ctx.fill();
 
