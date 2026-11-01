@@ -103,7 +103,7 @@
             vlastního iCloudu.
           </p>
 
-          <h2>Nesbíráme žádná data</h2>
+          <h2>Nesbírám žádná data</h2>
           <p>
             Aplikace se nikdy neptá na jméno, e-mail, telefonní číslo ani na
             žádný jiný osobní údaj. Nevyžaduje účet ani přihlášení a neodesílá
@@ -127,21 +127,26 @@
           <ul>
             <li>Dokončené úrovně</li>
             <li>Skóre za úrovně</li>
-            <li>Hvězdičky</li>
+            <li>Hvězdy</li>
             <li>Výzbroj lodi</li>
+            <li>Získané medaile</li>
             <li>Rekordy z nekonečné hry</li>
           </ul>
+          <p>
+            Ukládá se také čítač resetování postupu
+            (<code>progressEpoch</code>), který brání tomu, aby starší kopie na
+            jiném zařízení obnovila smazaný postup.
+          </p>
 
           <h2>Synchronizace přes iCloud</h2>
           <p>
-            Stejných pět hodnot se zrcadlí do Apple iCloud Key-Value Storage,
-            aby vás postup provázel mezi vašimi zařízeními a přežil přeinstalaci
-            aplikace. Tato data leží ve vašem osobním iCloud účtu, přečíst je
-            jde jen na zařízeních přihlášených vaším Apple ID a já k nim přístup
-            nemám — žádný můj server v tom v žádné chvíli nefiguruje. Pokud
-            chcete postup držet jen na jednom zařízení, vypněte pro Jetshot
-            iCloud Drive v Nastavení → vaše jméno → iCloud. Hra funguje i bez
-            něj normálně.
+            Všechny uvedené údaje o postupu včetně medailí a čítače resetování
+            se zrcadlí do Apple iCloud Key-Value Storage, aby vás postup
+            provázel mezi vašimi zařízeními a přežil přeinstalaci aplikace. Tato
+            data leží ve vašem osobním účtu iCloud, přečíst je lze jen na
+            zařízeních přihlášených vaším Apple ID a já k nim přístup nemám —
+            žádný můj server v tom v žádné chvíli nefiguruje. Bez přihlášeného
+            účtu iCloud hra funguje normálně s místním úložištěm.
           </p>
 
           <h2>Všechno ostatní běží offline</h2>
@@ -166,10 +171,11 @@
 
           <h2>Smazání dat</h2>
           <p>
-            Tlačítko RESET na obrazovce výběru úrovně smaže postup ze zařízení i
-            z iCloudu. Odinstalace aplikace odstraní lokální kopii; data v
-            iCloudu smažete spolu s daty aplikace v Nastavení → vaše jméno →
-            iCloud → Spravovat úložiště.
+            Tlačítko RESET na obrazovce výběru úrovně smaže dokončené úrovně,
+            skóre, hvězdy, výzbroj, medaile a rekordy ze zařízení i z iCloudu.
+            Čítač resetování zůstává uložený a zvýší se, aby se smazaný postup
+            nevrátil z jiného zařízení. Odinstalace aplikace odstraní lokální
+            kopii; sama o sobě nesmaže postup v iCloudu.
           </p>
 
           <h2>Změny těchto zásad</h2>
@@ -187,7 +193,7 @@
 
           <p class="legal-note">
             <svg class="icon" aria-hidden="true"><use href="#i-lock" /></svg>
-            Poslední aktualizace 29. srpna 2026 —
+            Poslední aktualizace 12. října 2026 —
             <a href="/privacy-policy-jetshot.html">English version</a>
           </p>
         </div>
