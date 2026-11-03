@@ -134,19 +134,28 @@
           </ul>
           <p>
             Ukládá se také čítač resetování postupu
-            (<code>progressEpoch</code>), který brání tomu, aby starší kopie na
-            jiném zařízení obnovila smazaný postup.
+            (<code>progressEpoch</code>) a čas posledního resetu
+            (<code>progressResetAt</code>), které brání tomu, aby starší kopie
+            na jiném zařízení obnovila smazaný postup. Zařízení si navíc
+            pamatuje, kdy začal jeho současný postup
+            (<code>progressStartedAt</code>), aby se postup vzniklý po resetu
+            nezaměnil za postup z doby před ním. Tento čas zůstává jen
+            v zařízení a nikam se nesynchronizuje.
           </p>
 
           <h2>Synchronizace přes iCloud</h2>
           <p>
-            Všechny uvedené údaje o postupu včetně medailí a čítače resetování
-            se zrcadlí do Apple iCloud Key-Value Storage, aby vás postup
-            provázel mezi vašimi zařízeními a přežil přeinstalaci aplikace. Tato
-            data leží ve vašem osobním účtu iCloud, přečíst je lze jen na
-            zařízeních přihlášených vaším Apple ID a já k nim přístup nemám —
-            žádný můj server v tom v žádné chvíli nefiguruje. Bez přihlášeného
-            účtu iCloud hra funguje normálně s místním úložištěm.
+            Všechny uvedené údaje o postupu včetně medailí, čítače resetování
+            a času resetu se zrcadlí do Apple iCloud Key-Value Storage, aby vás
+            postup provázel mezi vašimi zařízeními a přežil přeinstalaci
+            aplikace. U každé položky postupu je v iCloudu uložena i drobná
+            značka s číslem resetu, pod kterým byla uložena (například
+            <code>completedLevels.epoch</code>), aby šlo poznat a ignorovat
+            zápis ze zařízení, ke kterému reset ještě nedorazil. Tato data leží
+            ve vašem osobním účtu iCloud, přečíst je lze jen na zařízeních
+            přihlášených vaším Apple ID a já k nim přístup nemám — žádný můj
+            server v tom v žádné chvíli nefiguruje. Bez přihlášeného účtu iCloud
+            hra funguje normálně s místním úložištěm.
           </p>
 
           <h2>Všechno ostatní běží offline</h2>
@@ -172,10 +181,11 @@
           <h2>Smazání dat</h2>
           <p>
             Tlačítko RESET na obrazovce výběru úrovně smaže dokončené úrovně,
-            skóre, hvězdy, výzbroj, medaile a rekordy ze zařízení i z iCloudu.
-            Čítač resetování zůstává uložený a zvýší se, aby se smazaný postup
-            nevrátil z jiného zařízení. Odinstalace aplikace odstraní lokální
-            kopii; sama o sobě nesmaže postup v iCloudu.
+            skóre, hvězdy, výzbroj, medaile a rekordy ze zařízení i z iCloudu,
+            spolu s jejich značkami a časem začátku postupu. Čítač resetování
+            zůstává uložený, zvýší se a uloží se k němu čas resetu, aby se
+            smazaný postup nevrátil z jiného zařízení. Odinstalace aplikace
+            odstraní lokální kopii; sama o sobě nesmaže postup v iCloudu.
           </p>
 
           <h2>Změny těchto zásad</h2>
@@ -193,7 +203,7 @@
 
           <p class="legal-note">
             <svg class="icon" aria-hidden="true"><use href="#i-lock" /></svg>
-            Poslední aktualizace 12. října 2026 —
+            Poslední aktualizace 3. listopadu 2026 —
             <a href="/privacy-policy-jetshot.html">English version</a>
           </p>
         </div>

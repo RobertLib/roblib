@@ -134,21 +134,29 @@
             <li>Endless-run records</li>
           </ul>
           <p>
-            A progress reset counter (<code>progressEpoch</code>) is also stored
-            to prevent an older copy on another device from restoring erased
-            progress.
+            A progress reset counter (<code>progressEpoch</code>) and the time
+            of the last reset (<code>progressResetAt</code>) are also stored to
+            prevent an older copy on another device from restoring erased
+            progress. The device additionally keeps the time its current
+            progress began (<code>progressStartedAt</code>), so that progress
+            made after a reset is not mistaken for progress from before it. That
+            time stays on the device and is never synced.
           </p>
 
           <h2>iCloud synchronization</h2>
           <p>
-            All the progress values above, including medals and the reset
-            counter, are mirrored to Apple's iCloud Key-Value Storage so that
-            your progress follows you between your own devices and survives
-            reinstalling the app. That data lives in your personal iCloud
-            account, is readable only on devices signed in with your Apple ID,
-            and I have no access to it — there is no server of mine involved at
-            any point. With no iCloud account signed in, the game works normally
-            using local storage.
+            All the progress values above, including medals, the reset counter
+            and the reset time, are mirrored to Apple's iCloud Key-Value Storage
+            so that your progress follows you between your own devices and
+            survives reinstalling the app. Next to each progress value iCloud
+            also holds a small marker with the reset counter it was saved under
+            (for example <code>completedLevels.epoch</code>), so that a save
+            from a device that had not yet received a reset can be recognized
+            and ignored. That data lives in your personal iCloud account, is
+            readable only on devices signed in with your Apple ID, and I have no
+            access to it — there is no server of mine involved at any point.
+            With no iCloud account signed in, the game works normally using
+            local storage.
           </p>
 
           <h2>Everything else runs offline</h2>
@@ -175,10 +183,11 @@
           <p>
             RESET on the level-select screen erases completed levels, scores,
             star ratings, weapon loadouts, medals and endless records from the
-            device and from iCloud. The reset counter is retained and
-            incremented so that erased progress cannot return from another
-            device. Deleting the app removes the local copy; it does not by
-            itself erase your progress in iCloud.
+            device and from iCloud, together with their markers and the start
+            time. The reset counter is retained and incremented, and the time of
+            the reset is recorded with it, so that erased progress cannot return
+            from another device. Deleting the app removes the local copy; it
+            does not by itself erase your progress in iCloud.
           </p>
 
           <h2>Changes to this privacy policy</h2>
@@ -196,7 +205,7 @@
 
           <p class="legal-note">
             <svg class="icon" aria-hidden="true"><use href="#i-lock" /></svg>
-            Last updated 2026-10-12 —
+            Last updated 2026-11-03 —
             <a href="/privacy-policy-jetshot-cs.html">Česká verze</a>
           </p>
         </div>
