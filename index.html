@@ -6,13 +6,12 @@
     <title>
       Robert Libsansky — Full Stack Developer | Web, iOS &amp; Games | Prague
     </title>
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
     <meta
       name="description"
-      content="Robert Libsansky is a full stack developer in Prague building web apps with React and Node.js, native iOS apps in Swift, and games. 15 shipped projects, 5 apps on the App Store."
-    />
-    <meta
-      name="keywords"
-      content="Robert Libsansky, full stack developer Prague, web developer, iOS developer, game developer, React, Node.js, Swift, SpriteKit, C, SDL3, SwiftUI, Mini Golf 3D, Chess Offline, Solitaire Klondike, Jetshot, Breakup, Chuck, freelance developer"
+      content="Robert Libsansky is a full stack developer in Prague building web apps with React and Node.js, native iOS apps in Swift, and games. 16 shipped projects, 6 apps on the App Store."
     />
     <meta name="author" content="Robert Libsansky" />
     <meta name="robots" content="index, follow" />
@@ -28,31 +27,35 @@
     />
     <meta
       property="og:description"
-      content="Full stack developer in Prague. React and Node.js on the web, Swift on iOS, and games on both. 15 shipped projects, 5 apps on the App Store."
+      content="Full stack developer in Prague. React and Node.js on the web, Swift on iOS, and games on both. 16 shipped projects, 6 apps on the App Store."
     />
-    <meta property="og:image" content="https://roblib.dev/profile.jpeg" />
-    <meta property="og:image:width" content="240" />
-    <meta property="og:image:height" content="240" />
+    <meta property="og:image" content="https://roblib.dev/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta
       property="og:image:alt"
-      content="Portrait of Robert Libsansky, full stack developer"
+      content="Robert Libsansky — full stack developer shipping web, iOS and games"
     />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="Robert Libsansky" />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://roblib.dev/" />
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
     <meta
-      property="twitter:title"
+      name="twitter:title"
       content="Robert Libsansky — Full Stack Developer | Web, iOS &amp; Games"
     />
     <meta
-      property="twitter:description"
+      name="twitter:description"
       content="Full stack developer in Prague. React and Node.js on the web, Swift on iOS, and games on both."
     />
-    <meta property="twitter:image" content="https://roblib.dev/profile.jpeg" />
-    <meta property="twitter:creator" content="@RobertLibsansky" />
+    <meta name="twitter:image" content="https://roblib.dev/og-image.png" />
+    <meta
+      name="twitter:image:alt"
+      content="Robert Libsansky — full stack developer shipping web, iOS and games"
+    />
+    <meta name="twitter:creator" content="@RobertLibsansky" />
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -64,16 +67,18 @@
         "description": "Developer from Prague building web apps, iOS apps, and games",
         "url": "https://roblib.dev/",
         "image": "https://roblib.dev/profile.jpeg",
+        "email": "mailto:rob@hotmail.cz",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Prague",
-          "addressCountry": "Czech Republic"
+          "addressCountry": "CZ"
         },
         "sameAs": [
           "https://github.com/RobertLib",
           "https://x.com/RobertLibsansky",
           "https://roblibs-blog.com/",
-          "https://roblib.itch.io/"
+          "https://roblib.itch.io/",
+          "https://apps.apple.com/cz/developer/robert-libsansky/id1634043416"
         ],
         "knowsAbout": [
           "JavaScript",
@@ -91,35 +96,26 @@
           "Game Development",
           "Frontend Development",
           "Backend Development"
-        ],
-        "worksFor": {
-          "@type": "Organization",
-          "name": "Freelance"
-        }
+        ]
       }
     </script>
 
-    <!-- Additional SEO meta tags -->
-    <meta name="geo.region" content="CZ-10" />
-    <meta name="geo.placename" content="Prague" />
-    <meta name="geo.position" content="50.0755381;14.4378005" />
-    <meta name="ICBM" content="50.0755381, 14.4378005" />
     <meta name="theme-color" content="#08090c" />
-    <meta name="msapplication-TileColor" content="#08090c" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="apple-mobile-web-app-title" content="Robert Libsansky" />
 
     <!-- Language alternatives -->
     <link rel="alternate" hreflang="en" href="https://roblib.dev/" />
     <link rel="alternate" hreflang="x-default" href="https://roblib.dev/" />
 
+    <link rel="icon" href="favicon.ico" sizes="32x32" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      href="fonts/inter-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -274,6 +270,17 @@
             d="M40 48H136a24 24 0 0 1 24 24V112a24 24 0 0 1-24 24H40a24 24 0 0 1-24-24V72a24 24 0 0 1 24-24zM208 48H304a24 24 0 0 1 24 24V112a24 24 0 0 1-24 24H208a24 24 0 0 1-24-24V72a24 24 0 0 1 24-24zM376 48H472a24 24 0 0 1 24 24V112a24 24 0 0 1-24 24H376a24 24 0 0 1-24-24V72a24 24 0 0 1 24-24zM40 160H64a24 24 0 0 1 24 24V224a24 24 0 0 1-24 24H40a24 24 0 0 1-24-24V184a24 24 0 0 1 24-24zM136 160H232a24 24 0 0 1 24 24V224a24 24 0 0 1-24 24H136a24 24 0 0 1-24-24V184a24 24 0 0 1 24-24zM144 440H368a32 32 0 0 1 0 64H144a32 32 0 0 1 0-64zM336 336a40 40 0 1 0 80 0 40 40 0 1 0 -80 0z"
           />
         </symbol>
+        <symbol id="i-word" viewBox="0 0 512 512">
+          <path
+            fill-rule="evenodd"
+            d="M104 32H408a72 72 0 0 1 72 72V408a72 72 0 0 1-72 72H104a72 72 0 0 1-72-72V104a72 72 0 0 1 72-72zM96 128L164 384H214L256 250L298 384H348L416 128H362L322 300L280 160H232L190 300L150 128z"
+          />
+        </symbol>
+        <symbol id="i-mail" viewBox="0 0 512 512">
+          <path
+            d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
+          />
+        </symbol>
         <symbol id="i-eye" viewBox="0 0 576 512">
           <path
             d="M288 112C160 112 48 176 16 256c32 80 144 144 272 144s240-64 272-144c-32-80-144-144-272-144zm0 48c104 0 196 52 224 96-28 44-120 96-224 96S92 300 64 256c28-44 120-96 224-96zm0 32a64 64 0 1 0 0 128 64 64 0 1 0 0-128z"
@@ -294,7 +301,7 @@
 
     <header class="header">
       <nav class="nav" role="navigation" aria-label="Main navigation">
-        <a href="/" class="nav-logo" aria-label="RobLib — homepage">
+        <a href="/" class="nav-logo" aria-label="roblib.dev — homepage">
           <span class="logo-mark" aria-hidden="true">R</span>
           <span class="logo-text">roblib<span>.dev</span></span>
         </a>
@@ -355,12 +362,12 @@
           <div class="hero-content">
             <a
               class="status"
-              href="https://roblib.itch.io/breakup"
+              href="https://apps.apple.com/cz/app/wordwander-word-game-no-ads/id6831251198"
               target="_blank"
               rel="noopener noreferrer"
             >
               <span class="status-dot" aria-hidden="true"></span>
-              Latest release — Breakup on itch.io
+              Latest release — Wordwander
               <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg>
             </a>
 
@@ -393,11 +400,11 @@
 
             <div class="hero-stats">
               <div>
-                <div class="stat-num">15</div>
+                <div class="stat-num">16</div>
                 <div class="stat-label">Projects shipped</div>
               </div>
               <div>
-                <div class="stat-num">5</div>
+                <div class="stat-num">6</div>
                 <div class="stat-label">Apps on the App Store</div>
               </div>
               <div>
@@ -523,12 +530,8 @@
           <div class="about-grid">
             <div class="about-text reveal">
               <p>
-                I'm Robert, a developer based in <strong>Prague</strong> who
-                works across the full stack: React front-ends, Node.js APIs, and
-                native <strong>iOS apps in Swift</strong>. I started with web
-                development and over time expanded into mobile and game
-                development, mostly because I kept running into ideas I wanted
-                to build myself.
+                I'm Robert, and I work across the full stack: React front-ends,
+                Node.js APIs and native <strong>iOS apps in Swift</strong>.
               </p>
               <p>
                 Most of what I know comes from side projects. From
@@ -546,14 +549,20 @@
                 >, a movie and TV tracker I use myself. On the mobile side I
                 built
                 <a
-                  href="https://apps.apple.com/cz/app/j-notes/id1634043414"
+                  href="https://apps.apple.com/cz/app/j-notes-lock-screen-notes/id1634043414"
                   target="_blank"
                   rel="noopener noreferrer"
                   >J-Notes</a
                 >
-                and published four iOS games —
+                and published five iOS games —
                 <a
-                  href="https://apps.apple.com/us/app/jetshot/id6754814450"
+                  href="https://apps.apple.com/cz/app/wordwander-word-game-no-ads/id6831251198"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Wordwander</a
+                >,
+                <a
+                  href="https://apps.apple.com/cz/app/jetshot-offline-space-shooter/id6754814450"
                   target="_blank"
                   rel="noopener noreferrer"
                   >Jetshot</a
@@ -572,10 +581,10 @@
                 >
                 and
                 <a
-                  href="https://apps.apple.com/cz/app/solitaire-klondike-offline/id6806802031"
+                  href="https://apps.apple.com/cz/app/klondike-solitaire-no-ads/id6806802031"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Solitaire Klondike</a
+                  >Klondike Solitaire</a
                 >.
               </p>
               <p>
@@ -656,7 +665,7 @@
               <h3>iOS apps</h3>
               <p>
                 Native apps written in Swift that feel at home on the platform.
-                Five of mine are live on the App Store — a notes app and four
+                Six of mine are live on the App Store — a notes app and five
                 games.
               </p>
               <div class="tags">
@@ -675,10 +684,10 @@
               </div>
               <h3>Games</h3>
               <p>
-                Arcade, puzzle, board, card and stealth games for iOS, desktop
-                and the browser: SpriteKit and SwiftUI on Apple platforms, C and
-                SDL3 on desktop, plain JavaScript and Canvas on the web — no
-                engine, no framework.
+                Arcade, word, puzzle, board, card and stealth games for iOS,
+                desktop and the browser: SpriteKit and SwiftUI on Apple
+                platforms, C and SDL3 on desktop, plain JavaScript and Canvas on
+                the web — no off-the-shelf game engine.
               </p>
               <div class="tags">
                 <span class="tag">SpriteKit</span>
@@ -694,16 +703,16 @@
               <h4>Frontend</h4>
               <ul>
                 <li>
-                  <svg class="icon"><use href="#i-html5" /></svg>HTML5
+                  <svg class="icon" aria-hidden="true"><use href="#i-html5" /></svg>HTML5
                 </li>
                 <li>
-                  <svg class="icon"><use href="#i-css3" /></svg>CSS3
+                  <svg class="icon" aria-hidden="true"><use href="#i-css3" /></svg>CSS3
                 </li>
                 <li>
-                  <svg class="icon"><use href="#i-js" /></svg>JavaScript
+                  <svg class="icon" aria-hidden="true"><use href="#i-js" /></svg>JavaScript
                 </li>
                 <li>
-                  <svg class="icon"><use href="#i-react" /></svg>React
+                  <svg class="icon" aria-hidden="true"><use href="#i-react" /></svg>React
                 </li>
               </ul>
             </div>
@@ -711,13 +720,13 @@
               <h4>Backend</h4>
               <ul>
                 <li>
-                  <svg class="icon"><use href="#i-node" /></svg>Node.js
+                  <svg class="icon" aria-hidden="true"><use href="#i-node" /></svg>Node.js
                 </li>
                 <li>
-                  <svg class="icon"><use href="#i-db" /></svg>Databases
+                  <svg class="icon" aria-hidden="true"><use href="#i-db" /></svg>Databases
                 </li>
                 <li>
-                  <svg class="icon"><use href="#i-code" /></svg>REST APIs
+                  <svg class="icon" aria-hidden="true"><use href="#i-code" /></svg>REST APIs
                 </li>
               </ul>
             </div>
@@ -725,13 +734,13 @@
               <h4>Mobile</h4>
               <ul>
                 <li>
-                  <svg class="icon"><use href="#i-swift" /></svg>Swift
+                  <svg class="icon" aria-hidden="true"><use href="#i-swift" /></svg>Swift
                 </li>
                 <li>
-                  <svg class="icon"><use href="#i-apple" /></svg>iOS
+                  <svg class="icon" aria-hidden="true"><use href="#i-apple" /></svg>iOS
                 </li>
                 <li>
-                  <svg class="icon"><use href="#i-react" /></svg>React Native
+                  <svg class="icon" aria-hidden="true"><use href="#i-react" /></svg>React Native
                 </li>
               </ul>
             </div>
@@ -739,16 +748,16 @@
               <h4>Games</h4>
               <ul>
                 <li>
-                  <svg class="icon"><use href="#i-gamepad" /></svg>SpriteKit
+                  <svg class="icon" aria-hidden="true"><use href="#i-gamepad" /></svg>SpriteKit
                 </li>
                 <li>
-                  <svg class="icon"><use href="#i-code" /></svg>C &amp; SDL3
+                  <svg class="icon" aria-hidden="true"><use href="#i-code" /></svg>C &amp; SDL3
                 </li>
                 <li>
-                  <svg class="icon"><use href="#i-brush" /></svg>HTML5 Canvas
+                  <svg class="icon" aria-hidden="true"><use href="#i-brush" /></svg>HTML5 Canvas
                 </li>
                 <li>
-                  <svg class="icon"><use href="#i-play" /></svg>Game loops
+                  <svg class="icon" aria-hidden="true"><use href="#i-play" /></svg>Game loops
                 </li>
               </ul>
             </div>
@@ -770,7 +779,7 @@
             </p>
           </header>
 
-          <div itemscope itemtype="https://schema.org/ItemList">
+          <div>
             <!-- Featured -->
             <article
               class="card featured reveal"
@@ -805,7 +814,7 @@
                   rel="noopener noreferrer"
                   class="card-link"
                   itemprop="url"
-                  aria-label="Visit Old School Games website"
+                  aria-label="Visit site: Old School Games"
                 >
                   Visit site
                   <svg class="icon" aria-hidden="true">
@@ -849,7 +858,7 @@
                     rel="noopener noreferrer"
                     class="card-link"
                     itemprop="url"
-                    aria-label="Open Watch List"
+                    aria-label="Discover movies on Watch List"
                   >
                     Discover movies
                     <svg class="icon" aria-hidden="true">
@@ -885,7 +894,7 @@
                     <span class="tag">iOS</span>
                   </div>
                   <a
-                    href="https://apps.apple.com/cz/app/j-notes/id1634043414"
+                    href="https://apps.apple.com/cz/app/j-notes-lock-screen-notes/id1634043414"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="card-link"
@@ -930,7 +939,7 @@
                     rel="noopener noreferrer"
                     class="card-link"
                     itemprop="url"
-                    aria-label="Check the weather with WeatherNow"
+                    aria-label="Check weather with WeatherNow"
                   >
                     Check weather
                     <svg class="icon" aria-hidden="true">
@@ -1009,7 +1018,7 @@
                     rel="noopener noreferrer"
                     class="card-link"
                     itemprop="url"
-                    aria-label="Try the Paint app"
+                    aria-label="Try Paint in your browser"
                   >
                     Try Paint
                     <svg class="icon" aria-hidden="true">
@@ -1049,7 +1058,7 @@
                     rel="noopener noreferrer"
                     class="card-link"
                     itemprop="url"
-                    aria-label="Try the Quizzy app"
+                    aria-label="Try quiz on Quizzy"
                   >
                     Try quiz
                     <svg class="icon" aria-hidden="true">
@@ -1089,7 +1098,7 @@
                     rel="noopener noreferrer"
                     class="card-link"
                     itemprop="url"
-                    aria-label="Use the FortiPass password generator"
+                    aria-label="Generate password with FortiPass"
                   >
                     Generate password
                     <svg class="icon" aria-hidden="true">
@@ -1118,6 +1127,51 @@
           </header>
 
           <div class="games-grid">
+            <article
+              class="card reveal"
+              style="--h: 245"
+              itemscope
+              itemtype="https://schema.org/VideoGame"
+            >
+              <div class="cover">
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-word" />
+                </svg>
+              </div>
+              <div class="card-body">
+                <h3 itemprop="name">Wordwander: Word Game, No Ads</h3>
+                <p itemprop="description">
+                  A calm crossword game for iOS: swipe across a wheel of letters
+                  to fill the grid, through 1,200 levels in 100 chapters plus a
+                  new puzzle every day — in English and in Czech. Hints cost
+                  coins you earn by playing, never buy. No ads, no in-app
+                  purchases, fully offline.
+                </p>
+                <meta itemprop="genre" content="Word" />
+                <meta itemprop="applicationCategory" content="Game" />
+                <meta itemprop="operatingSystem" content="iOS" />
+                <div class="tags">
+                  <span class="tag">iOS</span>
+                  <span class="tag">Daily puzzle</span>
+                  <span class="tag">English &amp; Czech</span>
+                  <span class="tag">Offline</span>
+                </div>
+                <a
+                  href="https://apps.apple.com/cz/app/wordwander-word-game-no-ads/id6831251198"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="card-link"
+                  itemprop="url"
+                  aria-label="Download Wordwander: Word Game, No Ads from the App Store"
+                >
+                  App Store
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#i-apple" />
+                  </svg>
+                </a>
+              </div>
+            </article>
+
             <article
               class="card reveal"
               style="--h: 145"
@@ -1182,7 +1236,8 @@
                 <p itemprop="description">
                   Chess for one or two players on iPhone and iPad, with its own
                   engine running on the device — alpha-beta search across five
-                  levels, the top two opening from a book of 90 named lines.
+                  levels, the top two opening from a book of more than 80 named
+                  lines.
                   After every game it grades each move, draws the evaluation
                   graph and names the opening. No ads, no in-app purchases,
                   fully offline.
@@ -1320,7 +1375,7 @@
                 </svg>
               </div>
               <div class="card-body">
-                <h3 itemprop="name">Solitaire Klondike: Offline</h3>
+                <h3 itemprop="name">Klondike Solitaire: No Ads</h3>
                 <p itemprop="description">
                   Klondike for iPhone and iPad with the classic desktop scoring,
                   Vegas mode, and draw one or three. Undo that survives closing
@@ -1338,12 +1393,12 @@
                   <span class="tag">Offline</span>
                 </div>
                 <a
-                  href="https://apps.apple.com/cz/app/solitaire-klondike-offline/id6806802031"
+                  href="https://apps.apple.com/cz/app/klondike-solitaire-no-ads/id6806802031"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="card-link"
                   itemprop="url"
-                  aria-label="Download Solitaire Klondike: Offline from the App Store"
+                  aria-label="Download Klondike Solitaire: No Ads from the App Store"
                 >
                   App Store
                   <svg class="icon" aria-hidden="true">
@@ -1363,12 +1418,14 @@
                 <svg class="icon" aria-hidden="true"><use href="#i-jet" /></svg>
               </div>
               <div class="card-body">
-                <h3 itemprop="name">Jetshot</h3>
+                <h3 itemprop="name">Jetshot: Offline Space Shooter</h3>
                 <p itemprop="description">
-                  An arcade game for iOS where you fly a jet and dodge
-                  obstacles. My first published game on the App Store, written
-                  in Swift with SpriteKit — levels, scores, star ratings and
-                  iCloud sync.
+                  An arcade space shooter for iOS: fifty hand-built levels with
+                  a boss at the end of every one, an arsenal you build up and
+                  lose piece by piece when you get hit, and an endless run with
+                  no finish line. My first published game on the App Store,
+                  written in Swift with SpriteKit, with progress synced over
+                  iCloud.
                 </p>
                 <meta itemprop="genre" content="Arcade" />
                 <meta itemprop="applicationCategory" content="Game" />
@@ -1380,12 +1437,12 @@
                   <span class="tag">iCloud sync</span>
                 </div>
                 <a
-                  href="https://apps.apple.com/us/app/jetshot/id6754814450"
+                  href="https://apps.apple.com/cz/app/jetshot-offline-space-shooter/id6754814450"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="card-link"
                   itemprop="url"
-                  aria-label="Download Jetshot from the App Store"
+                  aria-label="Download Jetshot: Offline Space Shooter from the App Store"
                 >
                   App Store
                   <svg class="icon" aria-hidden="true">
@@ -1426,7 +1483,7 @@
                   rel="noopener noreferrer"
                   class="card-link"
                   itemprop="url"
-                  aria-label="Play Tangletris in your browser"
+                  aria-label="Play game: Tangletris"
                 >
                   Play game
                   <svg class="icon" aria-hidden="true">
@@ -1449,17 +1506,21 @@
             </h2>
             <p class="contact-lede">
               A web app, an iOS app, or just dev stuff worth arguing about — my
-              inbox is open. I'm based in Prague and always happy to hear about
-              an interesting project.
+              inbox is open, and I'm always happy to hear about an interesting
+              project.
             </p>
 
             <div class="contact-links">
+              <a href="mailto:rob@hotmail.cz" class="contact-link">
+                <svg class="icon" aria-hidden="true"><use href="#i-mail" /></svg>
+                rob@hotmail.cz
+              </a>
               <a
                 href="https://x.com/RobertLibsansky"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="contact-link"
-                aria-label="Message Robert Libsansky on X"
+                aria-label="X / Twitter (@RobertLibsansky)"
               >
                 <svg class="icon" aria-hidden="true"><use href="#i-x" /></svg>
                 X / Twitter
@@ -1504,7 +1565,7 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <a href="/" class="nav-logo" aria-label="RobLib — homepage">
+            <a href="/" class="nav-logo" aria-label="roblib.dev — homepage">
               <span class="logo-mark" aria-hidden="true">R</span>
               <span class="logo-text">roblib<span>.dev</span></span>
             </a>
@@ -1515,7 +1576,7 @@
           </div>
 
           <div class="footer-col">
-            <h4>Sitemap</h4>
+            <h2>Sitemap</h2>
             <ul>
               <li><a href="#about">About</a></li>
               <li><a href="#projects">Work</a></li>
@@ -1525,8 +1586,9 @@
           </div>
 
           <div class="footer-col">
-            <h4>Elsewhere</h4>
+            <h2>Elsewhere</h2>
             <ul>
+              <li><a href="mailto:rob@hotmail.cz">Email</a></li>
               <li>
                 <a
                   href="https://github.com/RobertLib"
@@ -1590,17 +1652,29 @@
         const header = document.querySelector(".header");
         const bar = document.querySelector(".progress-bar");
 
-        function onScroll() {
-          const y = window.scrollY;
-          header.classList.toggle("scrolled", y > 24);
+        let ticking = false;
 
+        function update() {
+          ticking = false;
+          // read layout first, then write, so the browser lays out only once
+          const y = window.scrollY;
           const max =
             document.documentElement.scrollHeight - window.innerHeight;
-          bar.style.width = max > 0 ? (y / max) * 100 + "%" : "0%";
+          const progress = max > 0 ? Math.min(y / max, 1) : 0;
+
+          header.classList.toggle("scrolled", y > 24);
+          bar.style.transform = "scaleX(" + progress + ")";
+        }
+
+        function onScroll() {
+          if (ticking) return;
+          ticking = true;
+          window.requestAnimationFrame(update);
         }
 
         window.addEventListener("scroll", onScroll, { passive: true });
-        onScroll();
+        window.addEventListener("resize", onScroll, { passive: true });
+        update();
 
         /* ---- mobile menu ---- */
         const toggle = document.querySelector(".nav-toggle");
@@ -1631,6 +1705,13 @@
           }
         });
 
+        // the burger disappears above 860px: don't leave the menu open and
+        // the page scroll-locked behind it
+        const desktop = window.matchMedia("(min-width: 861px)");
+        desktop.addEventListener("change", function (e) {
+          if (e.matches) closeMenu();
+        });
+
         /* ---- scroll reveal ---- */
         const revealables = document.querySelectorAll(".reveal");
 
@@ -1647,7 +1728,11 @@
                   (n) => n.classList.contains("reveal"),
                 );
                 const i = siblings.indexOf(el);
-                el.style.transitionDelay = Math.min(i, 5) * 70 + "ms";
+                // only the reveal animation reads this, hover stays instant
+                el.style.setProperty(
+                  "--reveal-delay",
+                  Math.min(i, 5) * 70 + "ms",
+                );
                 el.classList.add("is-visible");
                 obs.unobserve(el);
               });
@@ -1666,17 +1751,21 @@
           .filter(Boolean);
 
         if ("IntersectionObserver" in window && sections.length) {
+          // sections currently crossing the band in the middle of the screen;
+          // empty in the hero and in Contact, so nothing stays highlighted
+          const current = new Set();
           const spy = new IntersectionObserver(
             (entries) => {
               entries.forEach((entry) => {
-                if (!entry.isIntersecting) return;
-                links.forEach((l) =>
-                  l.classList.toggle(
-                    "active",
-                    l.getAttribute("href") === "#" + entry.target.id,
-                  ),
-                );
+                if (entry.isIntersecting) current.add(entry.target.id);
+                else current.delete(entry.target.id);
               });
+              links.forEach((l) =>
+                l.classList.toggle(
+                  "active",
+                  current.has(l.getAttribute("href").slice(1)),
+                ),
+              );
             },
             { rootMargin: "-45% 0px -50% 0px" },
           );

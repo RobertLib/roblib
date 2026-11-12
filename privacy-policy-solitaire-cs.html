@@ -31,12 +31,15 @@
       hreflang="x-default"
       href="https://roblib.dev/privacy-policy-solitaire.html"
     />
+    <link rel="icon" href="favicon.ico" sizes="32x32" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      href="fonts/inter-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -66,8 +69,8 @@
     </svg>
 
     <header class="header">
-      <nav class="nav" role="navigation" aria-label="Hlavní navigace">
-        <a href="/" class="nav-logo" aria-label="RobLib — domovská stránka">
+      <nav class="nav nav--simple" role="navigation" aria-label="Hlavní navigace">
+        <a href="/" class="nav-logo" aria-label="roblib.dev — domovská stránka">
           <span class="logo-mark" aria-hidden="true">R</span>
           <span class="logo-text">roblib<span>.dev</span></span>
         </a>
@@ -103,7 +106,7 @@
             sdílet ani ztratit.
           </p>
 
-          <h2>Nesbíráme žádná data</h2>
+          <h2>Nesbírám žádná data</h2>
           <p>
             Aplikace od vás nepožaduje jméno, e-mail, telefonní číslo ani žádný
             jiný osobní údaj. Nevyžaduje registraci ani přihlášení.
@@ -115,7 +118,7 @@
             vzniká uvnitř aplikace a hra funguje kompletně offline.
           </p>
 
-          <h2>Žádné analytiky, žádné reklamy</h2>
+          <h2>Žádná analytika, žádné reklamy</h2>
           <p>
             Aplikace neobsahuje reklamní sítě, analytické nástroje ani knihovny
             třetích stran, které by cokoli odesílaly.
@@ -189,7 +192,7 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-bottom" style="padding-top: 0">
-          <p>&copy; 2026 Robert Libsansky</p>
+          <p>&copy; 2026 Robert Libšanský</p>
           <a href="/">roblib.dev</a>
         </div>
       </div>
