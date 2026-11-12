@@ -181,6 +181,10 @@
             d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"
           />
         </symbol>
+        <symbol id="i-pause" viewBox="0 0 384 512">
+          <rect x="32" y="64" width="112" height="384" rx="40" />
+          <rect x="240" y="64" width="112" height="384" rx="40" />
+        </symbol>
         <symbol id="i-code" viewBox="0 0 640 512">
           <path
             d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"
@@ -218,7 +222,7 @@
         </symbol>
         <symbol id="i-lock" viewBox="0 0 448 512">
           <path
-            d="M144 144c0-44.2 35.8-80 80-80c31.9 0 59.4 18.6 72.3 45.7c7.6 16 26.7 22.8 42.6 15.2s22.8-26.7 15.2-42.6C331 33.7 281.5 0 224 0C144.5 0 80 64.5 80 144v48H64c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V256c0-35.3-28.7-64-64-64H144V144z"
+            d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z"
           />
         </symbol>
         <symbol id="i-cloud" viewBox="0 0 576 512">
@@ -442,73 +446,83 @@
       </section>
 
       <!-- ============ TECH MARQUEE ============ -->
-      <div class="marquee" aria-hidden="true">
-        <div class="marquee-inner">
-          <div class="marquee-track">
-            <span class="marquee-item"
-              ><svg class="icon"><use href="#i-js" /></svg>JavaScript</span
-            >
-            <span class="marquee-item"
-              ><svg class="icon"><use href="#i-react" /></svg>React</span
-            >
-            <span class="marquee-item"
-              ><svg class="icon"><use href="#i-node" /></svg>Node.js</span
-            >
-            <span class="marquee-item"
-              ><svg class="icon"><use href="#i-swift" /></svg>Swift</span
-            >
-            <span class="marquee-item"
-              ><svg class="icon"><use href="#i-db" /></svg>Databases</span
-            >
-            <span class="marquee-item"
-              ><svg class="icon"><use href="#i-html5" /></svg>HTML5</span
-            >
-            <span class="marquee-item"
-              ><svg class="icon"><use href="#i-css3" /></svg>CSS3</span
-            >
-            <span class="marquee-item"
-              ><svg class="icon"><use href="#i-react" /></svg>React Native</span
-            >
-            <span class="marquee-item"
-              ><svg class="icon"><use href="#i-gamepad" /></svg>SpriteKit</span
-            >
-            <span class="marquee-item"
-              ><svg class="icon"><use href="#i-brush" /></svg>HTML5 Canvas</span
-            >
-          </div>
-          <div class="marquee-track">
-            <span class="marquee-item"
-              ><svg class="icon"><use href="#i-js" /></svg>JavaScript</span
-            >
-            <span class="marquee-item"
-              ><svg class="icon"><use href="#i-react" /></svg>React</span
-            >
-            <span class="marquee-item"
-              ><svg class="icon"><use href="#i-node" /></svg>Node.js</span
-            >
-            <span class="marquee-item"
-              ><svg class="icon"><use href="#i-swift" /></svg>Swift</span
-            >
-            <span class="marquee-item"
-              ><svg class="icon"><use href="#i-db" /></svg>Databases</span
-            >
-            <span class="marquee-item"
-              ><svg class="icon"><use href="#i-html5" /></svg>HTML5</span
-            >
-            <span class="marquee-item"
-              ><svg class="icon"><use href="#i-css3" /></svg>CSS3</span
-            >
-            <span class="marquee-item"
-              ><svg class="icon"><use href="#i-react" /></svg>React Native</span
-            >
-            <span class="marquee-item"
-              ><svg class="icon"><use href="#i-gamepad" /></svg>SpriteKit</span
-            >
-            <span class="marquee-item"
-              ><svg class="icon"><use href="#i-brush" /></svg>HTML5 Canvas</span
-            >
+      <div class="marquee-wrap">
+        <div class="marquee" aria-hidden="true">
+          <div class="marquee-inner">
+            <div class="marquee-track">
+              <span class="marquee-item"
+                ><svg class="icon"><use href="#i-js" /></svg>JavaScript</span
+              >
+              <span class="marquee-item"
+                ><svg class="icon"><use href="#i-react" /></svg>React</span
+              >
+              <span class="marquee-item"
+                ><svg class="icon"><use href="#i-node" /></svg>Node.js</span
+              >
+              <span class="marquee-item"
+                ><svg class="icon"><use href="#i-swift" /></svg>Swift</span
+              >
+              <span class="marquee-item"
+                ><svg class="icon"><use href="#i-db" /></svg>Databases</span
+              >
+              <span class="marquee-item"
+                ><svg class="icon"><use href="#i-html5" /></svg>HTML5</span
+              >
+              <span class="marquee-item"
+                ><svg class="icon"><use href="#i-css3" /></svg>CSS3</span
+              >
+              <span class="marquee-item"
+                ><svg class="icon"><use href="#i-react" /></svg>React Native</span
+              >
+              <span class="marquee-item"
+                ><svg class="icon"><use href="#i-gamepad" /></svg>SpriteKit</span
+              >
+              <span class="marquee-item"
+                ><svg class="icon"><use href="#i-brush" /></svg>HTML5 Canvas</span
+              >
+            </div>
+            <div class="marquee-track">
+              <span class="marquee-item"
+                ><svg class="icon"><use href="#i-js" /></svg>JavaScript</span
+              >
+              <span class="marquee-item"
+                ><svg class="icon"><use href="#i-react" /></svg>React</span
+              >
+              <span class="marquee-item"
+                ><svg class="icon"><use href="#i-node" /></svg>Node.js</span
+              >
+              <span class="marquee-item"
+                ><svg class="icon"><use href="#i-swift" /></svg>Swift</span
+              >
+              <span class="marquee-item"
+                ><svg class="icon"><use href="#i-db" /></svg>Databases</span
+              >
+              <span class="marquee-item"
+                ><svg class="icon"><use href="#i-html5" /></svg>HTML5</span
+              >
+              <span class="marquee-item"
+                ><svg class="icon"><use href="#i-css3" /></svg>CSS3</span
+              >
+              <span class="marquee-item"
+                ><svg class="icon"><use href="#i-react" /></svg>React Native</span
+              >
+              <span class="marquee-item"
+                ><svg class="icon"><use href="#i-gamepad" /></svg>SpriteKit</span
+              >
+              <span class="marquee-item"
+                ><svg class="icon"><use href="#i-brush" /></svg>HTML5 Canvas</span
+              >
+            </div>
           </div>
         </div>
+        <button
+          class="marquee-toggle"
+          type="button"
+          aria-pressed="false"
+          aria-label="Pause the scrolling list of technologies"
+        >
+          <svg class="icon" aria-hidden="true"><use href="#i-pause" /></svg>
+        </button>
       </div>
 
       <!-- ============ ABOUT ============ -->
@@ -1152,9 +1166,9 @@
                 <p>
                   Chess for one or two players on iPhone and iPad, with its own
                   engine running on the device — alpha-beta search across five
-                  levels, the top two opening from a book of more than 80 named
-                  lines.
-                  After every game it grades each move, draws the evaluation
+                  levels, the two strongest playing their openings from a book
+                  of more than 80 named lines. After every game it grades each
+                  move, draws the evaluation
                   graph and names the opening. No ads, no in-app purchases,
                   fully offline.
                 </p>
@@ -1509,6 +1523,38 @@
           "(prefers-reduced-motion: reduce)",
         ).matches;
 
+        /* ---- scroll reveal ----
+           First on purpose: html.js hides every .reveal until this runs, so
+           an error further down must not be able to leave the page blank. */
+        const revealables = document.querySelectorAll(".reveal");
+
+        if (reduced || !("IntersectionObserver" in window)) {
+          revealables.forEach((el) => el.classList.add("is-visible"));
+        } else {
+          const observer = new IntersectionObserver(
+            (entries, obs) => {
+              entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                const el = entry.target;
+                const siblings = Array.prototype.filter.call(
+                  el.parentElement.children,
+                  (n) => n.classList.contains("reveal"),
+                );
+                const i = siblings.indexOf(el);
+                // only the reveal animation reads this, hover stays instant
+                el.style.setProperty(
+                  "--reveal-delay",
+                  Math.min(i, 5) * 70 + "ms",
+                );
+                el.classList.add("is-visible");
+                obs.unobserve(el);
+              });
+            },
+            { rootMargin: "0px 0px -12% 0px", threshold: 0.08 },
+          );
+          revealables.forEach((el) => observer.observe(el));
+        }
+
         /* ---- header state + scroll progress ---- */
         const header = document.querySelector(".header");
         const bar = document.querySelector(".progress-bar");
@@ -1540,28 +1586,39 @@
         /* ---- mobile menu ---- */
         const toggle = document.querySelector(".nav-toggle");
         const menu = document.getElementById("mobile-menu");
+        // the page behind the open menu: kept out of reach of Tab and clicks
+        const behind = document.querySelectorAll("main, .footer");
 
-        function closeMenu() {
-          menu.classList.remove("open");
-          toggle.setAttribute("aria-expanded", "false");
-          toggle.setAttribute("aria-label", "Open menu");
-          document.body.classList.remove("menu-open");
-        }
-
-        toggle.addEventListener("click", function () {
-          const open = menu.classList.toggle("open");
+        function setMenu(open) {
+          menu.classList.toggle("open", open);
           toggle.setAttribute("aria-expanded", String(open));
           toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
           document.body.classList.toggle("menu-open", open);
+          behind.forEach((el) => el.toggleAttribute("inert", open));
+        }
+
+        toggle.addEventListener("click", function () {
+          setMenu(!menu.classList.contains("open"));
         });
 
         menu.querySelectorAll("a").forEach((a) => {
-          a.addEventListener("click", closeMenu);
+          a.addEventListener("click", () => setMenu(false));
+        });
+
+        // a tap on the page below the menu closes it
+        document.addEventListener("click", function (e) {
+          if (
+            menu.classList.contains("open") &&
+            !menu.contains(e.target) &&
+            !toggle.contains(e.target)
+          ) {
+            setMenu(false);
+          }
         });
 
         document.addEventListener("keydown", function (e) {
           if (e.key === "Escape" && menu.classList.contains("open")) {
-            closeMenu();
+            setMenu(false);
             toggle.focus();
           }
         });
@@ -1569,39 +1626,26 @@
         // the burger disappears above 860px: don't leave the menu open and
         // the page scroll-locked behind it
         const desktop = window.matchMedia("(min-width: 861px)");
-        desktop.addEventListener("change", function (e) {
-          if (e.matches) closeMenu();
-        });
-
-        /* ---- scroll reveal ---- */
-        const revealables = document.querySelectorAll(".reveal");
-
-        if (reduced || !("IntersectionObserver" in window)) {
-          revealables.forEach((el) => el.classList.add("is-visible"));
+        const onDesktop = (e) => {
+          if (e.matches) setMenu(false);
+        };
+        if (desktop.addEventListener) {
+          desktop.addEventListener("change", onDesktop);
         } else {
-          const observer = new IntersectionObserver(
-            (entries, obs) => {
-              entries.forEach((entry) => {
-                if (!entry.isIntersecting) return;
-                const el = entry.target;
-                const siblings = Array.prototype.filter.call(
-                  el.parentElement.children,
-                  (n) => n.classList.contains("reveal"),
-                );
-                const i = siblings.indexOf(el);
-                // only the reveal animation reads this, hover stays instant
-                el.style.setProperty(
-                  "--reveal-delay",
-                  Math.min(i, 5) * 70 + "ms",
-                );
-                el.classList.add("is-visible");
-                obs.unobserve(el);
-              });
-            },
-            { rootMargin: "0px 0px -12% 0px", threshold: 0.08 },
-          );
-          revealables.forEach((el) => observer.observe(el));
+          desktop.addListener(onDesktop); // Safari < 14
         }
+
+        /* ---- marquee pause ---- */
+        const marquee = document.querySelector(".marquee");
+        const marqueeToggle = document.querySelector(".marquee-toggle");
+
+        marqueeToggle.addEventListener("click", function () {
+          const paused = marquee.classList.toggle("is-paused");
+          marqueeToggle.setAttribute("aria-pressed", String(paused));
+          marqueeToggle
+            .querySelector("use")
+            .setAttribute("href", paused ? "#i-play" : "#i-pause");
+        });
 
         /* ---- active nav link ---- */
         const links = Array.prototype.slice.call(

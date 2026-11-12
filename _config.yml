@@ -2,3 +2,4 @@
 # this file only keeps repository-only files off roblib.dev.
 exclude:
   - README.md
+  - og-image.html

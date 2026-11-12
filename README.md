@@ -17,8 +17,9 @@ Hosted on GitHub Pages from `main`; the custom domain is set in `CNAME`.
 | `404.html`                     | Served by GitHub Pages for any missing URL (uses absolute paths) |
 | `fonts/`                       | Self-hosted Inter and JetBrains Mono (SIL OFL, licences inside)  |
 | `og-image.png`                 | 1200×630 preview used when the site is shared                   |
+| `og-image.html`                | Source of `og-image.png` (not published)                        |
 | `google9c6c3f1645c36096.html`  | Google Search Console verification — keep it                    |
-| `_config.yml`                  | Keeps this README off the published site (GitHub Pages / Jekyll) |
+| `_config.yml`                  | Keeps repository-only files off the published site (Jekyll)     |
 
 The fonts are the Google Fonts subsets: `latin` and `latin-ext`, plus an
 `arrows` file holding only the "↗" glyph. A character outside those ranges
@@ -39,9 +40,23 @@ When adding a policy:
    before the colon, or the full name (`Chess Offline` / `Šachy offline`,
    `Mini Golf 3D: 108 Holes` / `Minigolf 3D: 108 jamek`).
 3. Add both URLs to `sitemap.xml`.
-4. Bump "Last updated" in both languages whenever the policy text changes.
+4. Bump "Last updated" in both languages whenever the policy text changes,
+   and the page's `<lastmod>` in `sitemap.xml` with it.
 5. Once the app is live, add it to `index.html` and update the counts (meta
-   description, Open Graph, hero stats, About, services).
+   description, Open Graph, hero stats, About, services). They are baked
+   into `og-image.png` too: change them in `og-image.html` and render it
+   again (below). Bump the homepage `<lastmod>` in `sitemap.xml`.
+
+## Open Graph image
+
+`og-image.png` is a screenshot of `og-image.html`, which uses the site's own
+styles, fonts and photo. With the local preview running (below):
+
+```sh
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless \
+  --hide-scrollbars --window-size=1200,630 --virtual-time-budget=3000 \
+  --screenshot=og-image.png http://localhost:8000/og-image.html
+```
 
 ## Local preview
 
