@@ -11,7 +11,7 @@
     </script>
     <meta
       name="description"
-      content="Robert Libsansky is a full stack developer in Prague building web apps with React and Node.js, native iOS apps in Swift, and games. 16 shipped projects, 6 apps on the App Store."
+      content="Full stack developer in Prague building React and Node.js web apps, native iOS apps in Swift, and games. 16 shipped projects, 6 apps on the App Store."
     />
     <meta name="author" content="Robert Libsansky" />
     <meta name="robots" content="index, follow" />
@@ -300,7 +300,7 @@
     </svg>
 
     <header class="header">
-      <nav class="nav" role="navigation" aria-label="Main navigation">
+      <nav class="nav" aria-label="Main navigation">
         <a href="/" class="nav-logo" aria-label="roblib.dev — homepage">
           <span class="logo-mark" aria-hidden="true">R</span>
           <span class="logo-text">roblib<span>.dev</span></span>
@@ -316,7 +316,7 @@
               class="nav-link"
               target="_blank"
               rel="noopener noreferrer"
-              >Blog ↗</a
+              >Blog <span aria-hidden="true">↗</span></a
             >
           </li>
         </ul>
@@ -616,7 +616,7 @@
                       href="https://roblibs-blog.com/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      >Blog ↗</a
+                      >Blog <span aria-hidden="true">↗</span></a
                     >
                   </dd>
                 </div>
@@ -627,7 +627,7 @@
                       href="https://github.com/RobertLib"
                       target="_blank"
                       rel="noopener noreferrer"
-                      >GitHub ↗</a
+                      >GitHub <span aria-hidden="true">↗</span></a
                     >
                   </dd>
                 </div>
@@ -700,7 +700,7 @@
 
           <div class="stack reveal">
             <div class="stack-group">
-              <h4>Frontend</h4>
+              <h3>Frontend</h3>
               <ul>
                 <li>
                   <svg class="icon" aria-hidden="true"><use href="#i-html5" /></svg>HTML5
@@ -717,7 +717,7 @@
               </ul>
             </div>
             <div class="stack-group">
-              <h4>Backend</h4>
+              <h3>Backend</h3>
               <ul>
                 <li>
                   <svg class="icon" aria-hidden="true"><use href="#i-node" /></svg>Node.js
@@ -731,7 +731,7 @@
               </ul>
             </div>
             <div class="stack-group">
-              <h4>Mobile</h4>
+              <h3>Mobile</h3>
               <ul>
                 <li>
                   <svg class="icon" aria-hidden="true"><use href="#i-swift" /></svg>Swift
@@ -745,7 +745,7 @@
               </ul>
             </div>
             <div class="stack-group">
-              <h4>Games</h4>
+              <h3>Games</h3>
               <ul>
                 <li>
                   <svg class="icon" aria-hidden="true"><use href="#i-gamepad" /></svg>SpriteKit
@@ -781,12 +781,7 @@
 
           <div>
             <!-- Featured -->
-            <article
-              class="card featured reveal"
-              style="--h: 32"
-              itemscope
-              itemtype="https://schema.org/CreativeWork"
-            >
+            <article class="card featured reveal" style="--h: 32">
               <div class="cover">
                 <span class="card-index">01</span>
                 <svg class="icon" aria-hidden="true">
@@ -795,8 +790,8 @@
               </div>
               <div class="card-body">
                 <span class="badge">Featured project</span>
-                <h3 itemprop="name">Old School Games</h3>
-                <p itemprop="description">
+                <h3>Old School Games</h3>
+                <p>
                   A site built around my love for classic DOS games — game
                   listings, reviews and downloads, running on its own custom
                   backend. It's the project I keep coming back to and the one
@@ -813,7 +808,6 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   class="card-link"
-                  itemprop="url"
                   aria-label="Visit site: Old School Games"
                 >
                   Visit site
@@ -825,12 +819,7 @@
             </article>
 
             <div class="work-grid">
-              <article
-                class="card reveal"
-                style="--h: 250"
-                itemscope
-                itemtype="https://schema.org/WebApplication"
-              >
+              <article class="card reveal" style="--h: 250">
                 <div class="cover">
                   <span class="card-index">02</span>
                   <svg class="icon" aria-hidden="true">
@@ -838,16 +827,12 @@
                   </svg>
                 </div>
                 <div class="card-body">
-                  <h3 itemprop="name">Watch List</h3>
-                  <p itemprop="description">
+                  <h3>Watch List</h3>
+                  <p>
                     A movie and TV tracker I built because I kept losing track
                     of what I wanted to watch. Pulls from a public API, lets you
                     browse by genre and keep your own list.
                   </p>
-                  <meta
-                    itemprop="applicationCategory"
-                    content="Entertainment"
-                  />
                   <div class="tags">
                     <span class="tag">Web app</span>
                     <span class="tag">REST API</span>
@@ -857,7 +842,6 @@
                     target="_blank"
                     rel="noopener noreferrer"
                     class="card-link"
-                    itemprop="url"
                     aria-label="Discover movies on Watch List"
                   >
                     Discover movies
@@ -868,12 +852,7 @@
                 </div>
               </article>
 
-              <article
-                class="card reveal"
-                style="--h: 265"
-                itemscope
-                itemtype="https://schema.org/SoftwareApplication"
-              >
+              <article class="card reveal" style="--h: 265">
                 <div class="cover">
                   <span class="card-index">03</span>
                   <svg class="icon" aria-hidden="true">
@@ -881,14 +860,12 @@
                   </svg>
                 </div>
                 <div class="card-body">
-                  <h3 itemprop="name">J-Notes</h3>
-                  <p itemprop="description">
+                  <h3>J-Notes</h3>
+                  <p>
                     A notes app built in Swift to learn iOS development
                     properly. Simple on purpose: fast note-taking without the
                     bloat.
                   </p>
-                  <meta itemprop="applicationCategory" content="Productivity" />
-                  <meta itemprop="operatingSystem" content="iOS" />
                   <div class="tags">
                     <span class="tag">Swift</span>
                     <span class="tag">iOS</span>
@@ -898,7 +875,6 @@
                     target="_blank"
                     rel="noopener noreferrer"
                     class="card-link"
-                    itemprop="url"
                     aria-label="Download J-Notes from the App Store"
                   >
                     App Store
@@ -909,12 +885,7 @@
                 </div>
               </article>
 
-              <article
-                class="card reveal"
-                style="--h: 200"
-                itemscope
-                itemtype="https://schema.org/WebApplication"
-              >
+              <article class="card reveal" style="--h: 200">
                 <div class="cover">
                   <span class="card-index">04</span>
                   <svg class="icon" aria-hidden="true">
@@ -922,13 +893,12 @@
                   </svg>
                 </div>
                 <div class="card-body">
-                  <h3 itemprop="name">WeatherNow</h3>
-                  <p itemprop="description">
+                  <h3>WeatherNow</h3>
+                  <p>
                     Current conditions, hourly predictions and a 7-day outlook,
                     built around a public weather API and designed to be
                     readable at a glance.
                   </p>
-                  <meta itemprop="applicationCategory" content="Weather" />
                   <div class="tags">
                     <span class="tag">Web app</span>
                     <span class="tag">REST API</span>
@@ -938,7 +908,6 @@
                     target="_blank"
                     rel="noopener noreferrer"
                     class="card-link"
-                    itemprop="url"
                     aria-label="Check weather with WeatherNow"
                   >
                     Check weather
@@ -949,12 +918,7 @@
                 </div>
               </article>
 
-              <article
-                class="card reveal"
-                style="--h: 12"
-                itemscope
-                itemtype="https://schema.org/CreativeWork"
-              >
+              <article class="card reveal" style="--h: 12">
                 <div class="cover">
                   <span class="card-index">05</span>
                   <svg class="icon" aria-hidden="true">
@@ -962,8 +926,8 @@
                   </svg>
                 </div>
                 <div class="card-body">
-                  <h3 itemprop="name">Personal Blog</h3>
-                  <p itemprop="description">
+                  <h3>Personal Blog</h3>
+                  <p>
                     Where I write about things I run into while building: mostly
                     web dev, occasional Swift, and whatever I'm tinkering with
                     at the moment.
@@ -977,7 +941,6 @@
                     target="_blank"
                     rel="noopener noreferrer"
                     class="card-link"
-                    itemprop="url"
                     aria-label="Read the blog"
                   >
                     Read the blog
@@ -988,12 +951,7 @@
                 </div>
               </article>
 
-              <article
-                class="card reveal"
-                style="--h: 300"
-                itemscope
-                itemtype="https://schema.org/WebApplication"
-              >
+              <article class="card reveal" style="--h: 300">
                 <div class="cover">
                   <span class="card-index">06</span>
                   <svg class="icon" aria-hidden="true">
@@ -1001,13 +959,12 @@
                   </svg>
                 </div>
                 <div class="card-body">
-                  <h3 itemprop="name">Paint</h3>
-                  <p itemprop="description">
+                  <h3>Paint</h3>
+                  <p>
                     A canvas-based drawing app in the browser. Built to explore
                     the HTML5 Canvas API and ended up more complete than I
                     expected.
                   </p>
-                  <meta itemprop="applicationCategory" content="Graphics" />
                   <div class="tags">
                     <span class="tag">HTML5 Canvas</span>
                     <span class="tag">JavaScript</span>
@@ -1017,7 +974,6 @@
                     target="_blank"
                     rel="noopener noreferrer"
                     class="card-link"
-                    itemprop="url"
                     aria-label="Try Paint in your browser"
                   >
                     Try Paint
@@ -1028,12 +984,7 @@
                 </div>
               </article>
 
-              <article
-                class="card reveal"
-                style="--h: 330"
-                itemscope
-                itemtype="https://schema.org/WebApplication"
-              >
+              <article class="card reveal" style="--h: 330">
                 <div class="cover">
                   <span class="card-index">07</span>
                   <svg class="icon" aria-hidden="true">
@@ -1041,13 +992,12 @@
                   </svg>
                 </div>
                 <div class="card-body">
-                  <h3 itemprop="name">Quizzy</h3>
-                  <p itemprop="description">
+                  <h3>Quizzy</h3>
+                  <p>
                     A quiz app built to play around with real-time scoring and
                     dynamic question rendering. Works well for a quick trivia
                     session.
                   </p>
-                  <meta itemprop="applicationCategory" content="Education" />
                   <div class="tags">
                     <span class="tag">Web app</span>
                     <span class="tag">Real-time scoring</span>
@@ -1057,7 +1007,6 @@
                     target="_blank"
                     rel="noopener noreferrer"
                     class="card-link"
-                    itemprop="url"
                     aria-label="Try quiz on Quizzy"
                   >
                     Try quiz
@@ -1068,12 +1017,7 @@
                 </div>
               </article>
 
-              <article
-                class="card reveal"
-                style="--h: 155"
-                itemscope
-                itemtype="https://schema.org/WebApplication"
-              >
+              <article class="card reveal" style="--h: 155">
                 <div class="cover">
                   <span class="card-index">08</span>
                   <svg class="icon" aria-hidden="true">
@@ -1081,13 +1025,12 @@
                   </svg>
                 </div>
                 <div class="card-body">
-                  <h3 itemprop="name">FortiPass</h3>
-                  <p itemprop="description">
+                  <h3>FortiPass</h3>
+                  <p>
                     A password generator that runs entirely in the browser — no
                     data leaves your machine. Pick the length and character set,
                     get a strong password.
                   </p>
-                  <meta itemprop="applicationCategory" content="Security" />
                   <div class="tags">
                     <span class="tag">Client-side only</span>
                     <span class="tag">JavaScript</span>
@@ -1097,7 +1040,6 @@
                     target="_blank"
                     rel="noopener noreferrer"
                     class="card-link"
-                    itemprop="url"
                     aria-label="Generate password with FortiPass"
                   >
                     Generate password
@@ -1127,29 +1069,21 @@
           </header>
 
           <div class="games-grid">
-            <article
-              class="card reveal"
-              style="--h: 245"
-              itemscope
-              itemtype="https://schema.org/VideoGame"
-            >
+            <article class="card reveal" style="--h: 245">
               <div class="cover">
                 <svg class="icon" aria-hidden="true">
                   <use href="#i-word" />
                 </svg>
               </div>
               <div class="card-body">
-                <h3 itemprop="name">Wordwander: Word Game, No Ads</h3>
-                <p itemprop="description">
+                <h3>Wordwander: Word Game, No Ads</h3>
+                <p>
                   A calm crossword game for iOS: swipe across a wheel of letters
                   to fill the grid, through 1,200 levels in 100 chapters plus a
                   new puzzle every day — in English and in Czech. Hints cost
                   coins you earn by playing, never buy. No ads, no in-app
                   purchases, fully offline.
                 </p>
-                <meta itemprop="genre" content="Word" />
-                <meta itemprop="applicationCategory" content="Game" />
-                <meta itemprop="operatingSystem" content="iOS" />
                 <div class="tags">
                   <span class="tag">iOS</span>
                   <span class="tag">Daily puzzle</span>
@@ -1161,7 +1095,6 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   class="card-link"
-                  itemprop="url"
                   aria-label="Download Wordwander: Word Game, No Ads from the App Store"
                 >
                   App Store
@@ -1172,32 +1105,21 @@
               </div>
             </article>
 
-            <article
-              class="card reveal"
-              style="--h: 145"
-              itemscope
-              itemtype="https://schema.org/VideoGame"
-            >
+            <article class="card reveal" style="--h: 145">
               <div class="cover">
                 <svg class="icon" aria-hidden="true">
                   <use href="#i-golf" />
                 </svg>
               </div>
               <div class="card-body">
-                <h3 itemprop="name">Mini Golf 3D: 108 Holes</h3>
-                <p itemprop="description">
+                <h3>Mini Golf 3D: 108 Holes</h3>
+                <p>
                   A putt-putt game for iPhone, iPad, Mac and Vision Pro: 108
                   hand-designed holes across nine themed worlds, drag-to-aim
                   controls with a predicted aim line, a daily challenge, and
                   unlockable balls and trophies. Runs fully offline — no ads, no
                   in-app purchases.
                 </p>
-                <meta itemprop="genre" content="Sports" />
-                <meta itemprop="applicationCategory" content="Game" />
-                <meta
-                  itemprop="operatingSystem"
-                  content="iOS, macOS, visionOS"
-                />
                 <div class="tags">
                   <span class="tag">Swift</span>
                   <span class="tag">3D</span>
@@ -1209,7 +1131,6 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   class="card-link"
-                  itemprop="url"
                   aria-label="Download Mini Golf 3D: 108 Holes from the App Store"
                 >
                   App Store
@@ -1220,20 +1141,15 @@
               </div>
             </article>
 
-            <article
-              class="card reveal"
-              style="--h: 38"
-              itemscope
-              itemtype="https://schema.org/VideoGame"
-            >
+            <article class="card reveal" style="--h: 38">
               <div class="cover">
                 <svg class="icon" aria-hidden="true">
                   <use href="#i-chess" />
                 </svg>
               </div>
               <div class="card-body">
-                <h3 itemprop="name">Chess Offline: Play &amp; Review</h3>
-                <p itemprop="description">
+                <h3>Chess Offline: Play &amp; Review</h3>
+                <p>
                   Chess for one or two players on iPhone and iPad, with its own
                   engine running on the device — alpha-beta search across five
                   levels, the top two opening from a book of more than 80 named
@@ -1242,9 +1158,6 @@
                   graph and names the opening. No ads, no in-app purchases,
                   fully offline.
                 </p>
-                <meta itemprop="genre" content="Board" />
-                <meta itemprop="applicationCategory" content="Game" />
-                <meta itemprop="operatingSystem" content="iOS" />
                 <div class="tags">
                   <span class="tag">Swift</span>
                   <span class="tag">SwiftUI</span>
@@ -1256,7 +1169,6 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   class="card-link"
-                  itemprop="url"
                   aria-label="Download Chess Offline: Play &amp; Review from the App Store"
                 >
                   App Store
@@ -1267,20 +1179,15 @@
               </div>
             </article>
 
-            <article
-              class="card reveal"
-              style="--h: 185"
-              itemscope
-              itemtype="https://schema.org/VideoGame"
-            >
+            <article class="card reveal" style="--h: 185">
               <div class="cover">
                 <svg class="icon" aria-hidden="true">
                   <use href="#i-bricks" />
                 </svg>
               </div>
               <div class="card-body">
-                <h3 itemprop="name">Breakup</h3>
-                <p itemprop="description">
+                <h3>Breakup</h3>
+                <p>
                   A neon brick-breaker played as a roguelite: four acts of
                   hand-designed towers in a new order every run, a perk after
                   every level, seven bosses and a daily seeded run. Written in C
@@ -1288,12 +1195,6 @@
                   synthesised at startup. Plays in the browser, with downloads
                   for Windows, macOS and Linux.
                 </p>
-                <meta itemprop="genre" content="Arcade" />
-                <meta itemprop="applicationCategory" content="Game" />
-                <meta
-                  itemprop="operatingSystem"
-                  content="Web, Windows, macOS, Linux"
-                />
                 <div class="tags">
                   <span class="tag">C</span>
                   <span class="tag">SDL3</span>
@@ -1305,7 +1206,6 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   class="card-link"
-                  itemprop="url"
                   aria-label="Play Breakup on itch.io"
                 >
                   itch.io
@@ -1316,18 +1216,13 @@
               </div>
             </article>
 
-            <article
-              class="card reveal"
-              style="--h: 350"
-              itemscope
-              itemtype="https://schema.org/VideoGame"
-            >
+            <article class="card reveal" style="--h: 350">
               <div class="cover">
                 <svg class="icon" aria-hidden="true"><use href="#i-eye" /></svg>
               </div>
               <div class="card-body">
-                <h3 itemprop="name">Chuck</h3>
-                <p itemprop="description">
+                <h3>Chuck</h3>
+                <p>
                   A 2D stealth-action game: infiltrate Kessler Tower across 17
                   sectors and 40 floors using takedowns, noise distraction and
                   flash charges, while guards patrol with real sight and
@@ -1335,12 +1230,6 @@
                   and every sound synthesised at runtime, so it ships as a
                   single binary with no asset files.
                 </p>
-                <meta itemprop="genre" content="Stealth" />
-                <meta itemprop="applicationCategory" content="Game" />
-                <meta
-                  itemprop="operatingSystem"
-                  content="Windows, macOS, Linux"
-                />
                 <div class="tags">
                   <span class="tag">C17</span>
                   <span class="tag">SDL3</span>
@@ -1352,7 +1241,6 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   class="card-link"
-                  itemprop="url"
                   aria-label="Get Chuck on itch.io"
                 >
                   itch.io
@@ -1363,29 +1251,21 @@
               </div>
             </article>
 
-            <article
-              class="card reveal"
-              style="--h: 280"
-              itemscope
-              itemtype="https://schema.org/VideoGame"
-            >
+            <article class="card reveal" style="--h: 280">
               <div class="cover">
                 <svg class="icon" aria-hidden="true">
                   <use href="#i-cards" />
                 </svg>
               </div>
               <div class="card-body">
-                <h3 itemprop="name">Klondike Solitaire: No Ads</h3>
-                <p itemprop="description">
+                <h3>Klondike Solitaire: No Ads</h3>
+                <p>
                   Klondike for iPhone and iPad with the classic desktop scoring,
                   Vegas mode, and draw one or three. Undo that survives closing
                   the app, hints that cycle through every useful move, dead-end
                   detection, separate stats for each draw mode and full
                   VoiceOver support. No ads, no in-app purchases, fully offline.
                 </p>
-                <meta itemprop="genre" content="Card" />
-                <meta itemprop="applicationCategory" content="Game" />
-                <meta itemprop="operatingSystem" content="iOS" />
                 <div class="tags">
                   <span class="tag">Swift</span>
                   <span class="tag">SwiftUI</span>
@@ -1397,7 +1277,6 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   class="card-link"
-                  itemprop="url"
                   aria-label="Download Klondike Solitaire: No Ads from the App Store"
                 >
                   App Store
@@ -1408,18 +1287,13 @@
               </div>
             </article>
 
-            <article
-              class="card reveal"
-              style="--h: 210"
-              itemscope
-              itemtype="https://schema.org/VideoGame"
-            >
+            <article class="card reveal" style="--h: 210">
               <div class="cover">
                 <svg class="icon" aria-hidden="true"><use href="#i-jet" /></svg>
               </div>
               <div class="card-body">
-                <h3 itemprop="name">Jetshot: Offline Space Shooter</h3>
-                <p itemprop="description">
+                <h3>Jetshot: Offline Space Shooter</h3>
+                <p>
                   An arcade space shooter for iOS: fifty hand-built levels with
                   a boss at the end of every one, an arsenal you build up and
                   lose piece by piece when you get hit, and an endless run with
@@ -1427,9 +1301,6 @@
                   written in Swift with SpriteKit, with progress synced over
                   iCloud.
                 </p>
-                <meta itemprop="genre" content="Arcade" />
-                <meta itemprop="applicationCategory" content="Game" />
-                <meta itemprop="operatingSystem" content="iOS" />
                 <div class="tags">
                   <span class="tag">Swift</span>
                   <span class="tag">SpriteKit</span>
@@ -1441,7 +1312,6 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   class="card-link"
-                  itemprop="url"
                   aria-label="Download Jetshot: Offline Space Shooter from the App Store"
                 >
                   App Store
@@ -1452,26 +1322,19 @@
               </div>
             </article>
 
-            <article
-              class="card reveal"
-              style="--h: 90"
-              itemscope
-              itemtype="https://schema.org/VideoGame"
-            >
+            <article class="card reveal" style="--h: 90">
               <div class="cover">
                 <svg class="icon" aria-hidden="true">
                   <use href="#i-blocks" />
                 </svg>
               </div>
               <div class="card-body">
-                <h3 itemprop="name">Tangletris</h3>
-                <p itemprop="description">
+                <h3>Tangletris</h3>
+                <p>
                   A Tetris-inspired browser game made with plain JavaScript and
                   HTML5 Canvas. No libraries, no framework — just canvas
                   rendering and game loop logic.
                 </p>
-                <meta itemprop="genre" content="Puzzle" />
-                <meta itemprop="applicationCategory" content="Game" />
                 <div class="tags">
                   <span class="tag">JavaScript</span>
                   <span class="tag">HTML5 Canvas</span>
@@ -1482,7 +1345,6 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   class="card-link"
-                  itemprop="url"
                   aria-label="Play game: Tangletris"
                 >
                   Play game
@@ -1551,9 +1413,8 @@
 
             <div class="contact-meta">
               <svg class="icon" aria-hidden="true"><use href="#i-pin" /></svg>
-              <address itemscope itemtype="https://schema.org/PostalAddress">
-                <span itemprop="addressLocality">Prague</span>,
-                <span itemprop="addressCountry">Czech Republic</span>
+              <address>
+                Prague, Czech Republic
               </address>
             </div>
           </div>
@@ -1594,7 +1455,7 @@
                   href="https://github.com/RobertLib"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >GitHub ↗</a
+                  >GitHub <span aria-hidden="true">↗</span></a
                 >
               </li>
               <li>
@@ -1602,7 +1463,7 @@
                   href="https://x.com/RobertLibsansky"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >X / Twitter ↗</a
+                  >X / Twitter <span aria-hidden="true">↗</span></a
                 >
               </li>
               <li>
@@ -1610,7 +1471,7 @@
                   href="https://roblibs-blog.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Blog ↗</a
+                  >Blog <span aria-hidden="true">↗</span></a
                 >
               </li>
               <li>
@@ -1618,7 +1479,7 @@
                   href="https://apps.apple.com/cz/developer/robert-libsansky/id1634043416"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >App Store ↗</a
+                  >App Store <span aria-hidden="true">↗</span></a
                 >
               </li>
               <li>
@@ -1626,7 +1487,7 @@
                   href="https://roblib.itch.io/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >itch.io ↗</a
+                  >itch.io <span aria-hidden="true">↗</span></a
                 >
               </li>
             </ul>
@@ -1634,7 +1495,7 @@
         </div>
 
         <div class="footer-bottom">
-          <p>&copy; 2026 Robert Libsansky</p>
+          <p>&copy; <span id="year">2026</span> Robert Libsansky</p>
           <p>Handwritten HTML, CSS &amp; JavaScript — no frameworks.</p>
         </div>
       </div>
@@ -1771,6 +1632,9 @@
           );
           sections.forEach((s) => spy.observe(s));
         }
+
+        /* ---- footer year ---- */
+        document.getElementById("year").textContent = new Date().getFullYear();
 
         /* ---- cursor spotlight on cards ---- */
         if (!reduced && window.matchMedia("(hover: hover)").matches) {

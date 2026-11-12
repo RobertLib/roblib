@@ -69,7 +69,7 @@
     </svg>
 
     <header class="header">
-      <nav class="nav nav--simple" role="navigation" aria-label="Hlavní navigace">
+      <nav class="nav nav--simple" aria-label="Hlavní navigace">
         <a href="/" class="nav-logo" aria-label="roblib.dev — domovská stránka">
           <span class="logo-mark" aria-hidden="true">R</span>
           <span class="logo-text">roblib<span>.dev</span></span>
@@ -209,7 +209,7 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-bottom" style="padding-top: 0">
-          <p>&copy; 2026 Robert Libšanský</p>
+          <p>&copy; <span id="year">2026</span> Robert Libšanský</p>
           <a href="/">roblib.dev</a>
         </div>
       </div>
@@ -225,6 +225,7 @@
         },
         { passive: true },
       );
+      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
   </body>
 </html>

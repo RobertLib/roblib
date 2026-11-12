@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Privacy Policy — Chess | Robert Libsansky</title>
+    <title>Privacy Policy — Chess Offline | Robert Libsansky</title>
     <meta
       name="description"
-      content="Privacy Policy for Chess, an iOS board game by Robert Libsansky. No personal data is collected; the app has no networking code and your progress stays on your device."
+      content="Privacy Policy for Chess Offline, an iOS board game by Robert Libsansky. No personal data is collected; the app has no networking code and your progress stays on your device."
     />
     <meta name="author" content="Robert Libsansky" />
     <meta name="robots" content="index, follow" />
@@ -66,7 +66,7 @@
     </svg>
 
     <header class="header">
-      <nav class="nav nav--simple" role="navigation" aria-label="Main navigation">
+      <nav class="nav nav--simple" aria-label="Main navigation">
         <a href="/" class="nav-logo" aria-label="roblib.dev — homepage">
           <span class="logo-mark" aria-hidden="true">R</span>
           <span class="logo-text">roblib<span>.dev</span></span>
@@ -82,20 +82,20 @@
 
     <main id="main" class="legal">
       <div class="container legal-inner">
-        <p class="eyebrow">Legal — Chess</p>
+        <p class="eyebrow">Legal — Chess Offline</p>
         <h1>Privacy Policy</h1>
         <p class="legal-sub">
-          Chess is an iOS game built by Robert Libsansky. It does not collect,
-          store or transmit any personal data — this page explains exactly what
-          that means.
+          Chess Offline is an iOS game built by Robert Libsansky. It does not
+          collect, store or transmit any personal data — this page explains
+          exactly what that means.
         </p>
 
         <div class="legal-card">
           <p>
-            Robert Libsansky built the Chess app as a game for iOS. This service
-            is provided as is, and this page is used to inform you about my
-            policies regarding the collection, use and disclosure of information
-            if you decide to use it.
+            Robert Libsansky built the Chess Offline app as a game for iOS. This
+            service is provided as is, and this page is used to inform you about
+            my policies regarding the collection, use and disclosure of
+            information if you decide to use it.
           </p>
 
           <p>
@@ -111,11 +111,11 @@
 
           <h2>It does not connect to the internet</h2>
           <p>
-            Chess contains no networking code. The chess engine is the app's own
-            and runs on your device, the pieces are drawn from vector paths in
-            code, the sounds are generated at launch and the puzzles ship inside
-            the app, so everything works entirely offline — the home-screen
-            widget included.
+            Chess Offline contains no networking code. The chess engine is the
+            app's own and runs on your device, the pieces are drawn from vector
+            paths in code, the sounds are generated at launch and the puzzles
+            ship inside the app, so everything works entirely offline — the
+            home-screen widget included.
           </p>
 
           <h2>No analytics, no advertising</h2>
@@ -212,7 +212,7 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-bottom" style="padding-top: 0">
-          <p>&copy; 2026 Robert Libsansky</p>
+          <p>&copy; <span id="year">2026</span> Robert Libsansky</p>
           <a href="/">roblib.dev</a>
         </div>
       </div>
@@ -228,6 +228,7 @@
         },
         { passive: true },
       );
+      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
   </body>
 </html>

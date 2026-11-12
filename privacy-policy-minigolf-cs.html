@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      Zásady ochrany osobních údajů — Mini Golf 3D: 108 Holes | Robert Libšanský
+      Zásady ochrany osobních údajů — Minigolf 3D: 108 jamek | Robert Libšanský
     </title>
     <meta
       name="description"
-      content="Zásady ochrany osobních údajů pro hru Mini Golf 3D: 108 Holes od Roberta Libšanského. Aplikace nesbírá žádné osobní údaje, neobsahuje síťový kód a herní postup zůstává ve vašem zařízení."
+      content="Zásady ochrany osobních údajů pro hru Minigolf 3D: 108 jamek od Roberta Libšanského. Aplikace nesbírá žádné osobní údaje, neobsahuje síťový kód a herní postup zůstává ve vašem zařízení."
     />
     <meta name="author" content="Robert Libšanský" />
     <meta name="robots" content="index, follow" />
@@ -71,7 +71,7 @@
     </svg>
 
     <header class="header">
-      <nav class="nav nav--simple" role="navigation" aria-label="Hlavní navigace">
+      <nav class="nav nav--simple" aria-label="Hlavní navigace">
         <a href="/" class="nav-logo" aria-label="roblib.dev — domovská stránka">
           <span class="logo-mark" aria-hidden="true">R</span>
           <span class="logo-text">roblib<span>.dev</span></span>
@@ -87,17 +87,17 @@
 
     <main id="main" class="legal">
       <div class="container legal-inner">
-        <p class="eyebrow">Právní informace — Mini Golf 3D: 108 Holes</p>
+        <p class="eyebrow">Právní informace — Minigolf 3D: 108 jamek</p>
         <h1>Zásady ochrany osobních údajů</h1>
         <p class="legal-sub">
-          Mini Golf 3D: 108 Holes je hra pro iPhone, iPad, Mac a Apple Vision
+          Minigolf 3D: 108 jamek je hra pro iPhone, iPad, Mac a Apple Vision
           Pro od Roberta Libšanského. Nesbírá, neukládá ani nepředává žádné
           osobní údaje — tato stránka vysvětluje, co přesně to znamená.
         </p>
 
         <div class="legal-card">
           <p>
-            Aplikaci Mini Golf 3D: 108 Holes vytvořil Robert Libšanský jako hru
+            Aplikaci Minigolf 3D: 108 jamek vytvořil Robert Libšanský jako hru
             pro iPhone, iPad, Mac a Apple Vision Pro. Služba je poskytována tak,
             jak je, a tato stránka vás informuje o mém přístupu ke
             shromažďování, používání a zpřístupňování informací, pokud se ji
@@ -117,7 +117,7 @@
 
           <h2>Nepřipojuje se k internetu</h2>
           <p>
-            Mini Golf 3D neobsahuje žádný síťový kód. Veškerý obsah — jamky,
+            Minigolf 3D neobsahuje žádný síťový kód. Veškerý obsah — jamky,
             grafika i zvuky — je součástí aplikace a hra funguje kompletně
             offline.
           </p>
@@ -178,7 +178,7 @@
 
           <p class="legal-note">
             <svg class="icon" aria-hidden="true"><use href="#i-lock" /></svg>
-            Poslední aktualizace 2. srpna 2026 —
+            Poslední aktualizace 12. listopadu 2026 —
             <a href="/privacy-policy-minigolf.html">English version</a>
           </p>
         </div>
@@ -199,7 +199,7 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-bottom" style="padding-top: 0">
-          <p>&copy; 2026 Robert Libšanský</p>
+          <p>&copy; <span id="year">2026</span> Robert Libšanský</p>
           <a href="/">roblib.dev</a>
         </div>
       </div>
@@ -215,6 +215,7 @@
         },
         { passive: true },
       );
+      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
   </body>
 </html>

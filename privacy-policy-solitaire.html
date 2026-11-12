@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Privacy Policy — Solitaire | Robert Libsansky</title>
+    <title>Privacy Policy — Klondike Solitaire | Robert Libsansky</title>
     <meta
       name="description"
-      content="Privacy Policy for Solitaire, an iOS card game by Robert Libsansky. No personal data is collected; the app has no networking code and your progress stays on your device."
+      content="Privacy Policy for Klondike Solitaire, an iOS card game by Robert Libsansky. No personal data is collected; the app has no networking code and your progress stays on your device."
     />
     <meta name="author" content="Robert Libsansky" />
     <meta name="robots" content="index, follow" />
@@ -69,7 +69,7 @@
     </svg>
 
     <header class="header">
-      <nav class="nav nav--simple" role="navigation" aria-label="Main navigation">
+      <nav class="nav nav--simple" aria-label="Main navigation">
         <a href="/" class="nav-logo" aria-label="roblib.dev — homepage">
           <span class="logo-mark" aria-hidden="true">R</span>
           <span class="logo-text">roblib<span>.dev</span></span>
@@ -85,19 +85,19 @@
 
     <main id="main" class="legal">
       <div class="container legal-inner">
-        <p class="eyebrow">Legal — Solitaire</p>
+        <p class="eyebrow">Legal — Klondike Solitaire</p>
         <h1>Privacy Policy</h1>
         <p class="legal-sub">
-          Solitaire is an iOS game built by Robert Libsansky. It does not
-          collect, store or transmit any personal data — this page explains
+          Klondike Solitaire is an iOS game built by Robert Libsansky. It does
+          not collect, store or transmit any personal data — this page explains
           exactly what that means.
         </p>
 
         <div class="legal-card">
           <p>
-            Robert Libsansky built the Solitaire app as a game for iOS. This
-            service is provided as is, and this page is used to inform you about
-            my policies regarding the collection, use and disclosure of
+            Robert Libsansky built the Klondike Solitaire app as a game for iOS.
+            This service is provided as is, and this page is used to inform you
+            about my policies regarding the collection, use and disclosure of
             information if you decide to use it.
           </p>
 
@@ -114,9 +114,9 @@
 
           <h2>It does not connect to the internet</h2>
           <p>
-            Solitaire contains no networking code. Everything — the cards and
-            the sounds alike — is generated inside the app, and the game works
-            entirely offline.
+            Klondike Solitaire contains no networking code. Everything — the
+            cards and the sounds alike — is generated inside the app, and the
+            game works entirely offline.
           </p>
 
           <h2>No analytics, no advertising</h2>
@@ -193,7 +193,7 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-bottom" style="padding-top: 0">
-          <p>&copy; 2026 Robert Libsansky</p>
+          <p>&copy; <span id="year">2026</span> Robert Libsansky</p>
           <a href="/">roblib.dev</a>
         </div>
       </div>
@@ -209,6 +209,7 @@
         },
         { passive: true },
       );
+      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
   </body>
 </html>

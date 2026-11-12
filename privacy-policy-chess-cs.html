@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zásady ochrany osobních údajů — Šachy | Robert Libšanský</title>
+    <title>
+      Zásady ochrany osobních údajů — Šachy offline | Robert Libšanský
+    </title>
     <meta
       name="description"
-      content="Zásady ochrany osobních údajů pro hru Šachy od Roberta Libšanského. Aplikace nesbírá žádné osobní údaje, neobsahuje síťový kód a herní postup zůstává ve vašem zařízení."
+      content="Zásady ochrany osobních údajů pro hru Šachy offline od Roberta Libšanského. Aplikace nesbírá žádné osobní údaje, neobsahuje síťový kód a herní postup zůstává ve vašem zařízení."
     />
     <meta name="author" content="Robert Libšanský" />
     <meta name="robots" content="index, follow" />
@@ -69,7 +71,7 @@
     </svg>
 
     <header class="header">
-      <nav class="nav nav--simple" role="navigation" aria-label="Hlavní navigace">
+      <nav class="nav nav--simple" aria-label="Hlavní navigace">
         <a href="/" class="nav-logo" aria-label="roblib.dev — domovská stránka">
           <span class="logo-mark" aria-hidden="true">R</span>
           <span class="logo-text">roblib<span>.dev</span></span>
@@ -85,20 +87,20 @@
 
     <main id="main" class="legal">
       <div class="container legal-inner">
-        <p class="eyebrow">Právní informace — Šachy</p>
+        <p class="eyebrow">Právní informace — Šachy offline</p>
         <h1>Zásady ochrany osobních údajů</h1>
         <p class="legal-sub">
-          Šachy jsou hra pro iOS od Roberta Libšanského. Nesbírají, neukládají
-          ani nepředávají žádné osobní údaje — tato stránka vysvětluje, co
-          přesně to znamená.
+          Šachy offline jsou hra pro iOS od Roberta Libšanského. Nesbírají,
+          neukládají ani nepředávají žádné osobní údaje — tato stránka
+          vysvětluje, co přesně to znamená.
         </p>
 
         <div class="legal-card">
           <p>
-            Aplikaci Šachy vytvořil Robert Libšanský jako hru pro iOS. Služba je
-            poskytována tak, jak je, a tato stránka vás informuje o mém přístupu
-            ke shromažďování, používání a zpřístupňování informací, pokud se ji
-            rozhodnete používat.
+            Aplikaci Šachy offline vytvořil Robert Libšanský jako hru pro iOS.
+            Služba je poskytována tak, jak je, a tato stránka vás informuje
+            o mém přístupu ke shromažďování, používání a zpřístupňování
+            informací, pokud se ji rozhodnete používat.
           </p>
 
           <p>
@@ -114,11 +116,11 @@
 
           <h2>Nepřipojuje se k internetu</h2>
           <p>
-            Šachy neobsahují žádný síťový kód. Šachový engine je vlastní a
-            počítá ve vašem zařízení, figury se kreslí z vektorových cest v
-            kódu, zvuky vznikají až při spuštění a úlohy jsou přibalené přímo v
-            aplikaci, takže všechno funguje kompletně offline — včetně widgetu
-            na ploše.
+            Šachy offline neobsahují žádný síťový kód. Šachový engine je
+            vlastní a počítá ve vašem zařízení, figury se kreslí z vektorových
+            cest v kódu, zvuky vznikají až při spuštění a úlohy jsou přibalené
+            přímo v aplikaci, takže všechno funguje kompletně offline — včetně
+            widgetu na ploše.
           </p>
 
           <h2>Žádná analytika, žádné reklamy</h2>
@@ -217,7 +219,7 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-bottom" style="padding-top: 0">
-          <p>&copy; 2026 Robert Libšanský</p>
+          <p>&copy; <span id="year">2026</span> Robert Libšanský</p>
           <a href="/">roblib.dev</a>
         </div>
       </div>
@@ -233,6 +235,7 @@
         },
         { passive: true },
       );
+      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
   </body>
 </html>
