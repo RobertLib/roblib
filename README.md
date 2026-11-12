@@ -35,7 +35,9 @@ published `privacy-policy-*.html`** — the App Store listing would point at a
 When adding a policy:
 
 1. Copy an existing pair (EN + CS) and update the canonical and `hreflang`
-   links in both.
+   links in both. Keep the closing "Contact and your rights" section as it
+   is: it holds the GDPR notices (controller, legal basis, retention, rights).
+   Czech text takes the en dash with spaces (` – `), English the em dash.
 2. Name the app as its App Store listing does in that language — the part
    before the colon, or the full name (`Chess Offline` / `Šachy offline`,
    `Mini Golf 3D: 108 Holes` / `Minigolf 3D: 108 jamek`).

@@ -1427,8 +1427,29 @@ a.status:hover .icon {
 .work-grid,
 .games-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
   gap: 1.6rem;
+}
+
+/* fixed column counts (3, then 2 and 1 in Responsive) rather than auto-fill,
+   so a card left alone on the last row can be found and given the row */
+.work-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (min-width: 981px) {
+  .work-grid > .card:last-child:nth-child(3n + 1) {
+    grid-column: 1 / -1;
+    display: grid;
+    /* cover beside the text, as wide as one column above (gap: 1.6rem) */
+    grid-template-columns: calc((100% - 2 * 1.6rem) / 3) minmax(0, 1fr);
+  }
+
+  .work-grid > .card:last-child:nth-child(3n + 1) .cover {
+    height: auto;
+    min-height: 160px;
+    border-bottom: 0;
+    border-right: 1px solid var(--line);
+  }
 }
 
 /* ---------- 9. Games ---------- */
@@ -1799,6 +1820,16 @@ a.status:hover .icon {
     border-bottom: 1px solid var(--line);
   }
 
+  .work-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* two columns: a card alone on the last row spans it, stacked like
+     .featured at this width */
+  .work-grid > .card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -1830,6 +1861,13 @@ a.status:hover .icon {
   }
 }
 
+/* below this a work card would get narrower than ~290px in two columns */
+@media (max-width: 680px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 420px) {
   .nav--simple .logo-text {
     display: none;
@@ -1849,7 +1887,6 @@ a.status:hover .icon {
     flex: 1 1 100%;
   }
 
-  .work-grid,
   .games-grid {
     grid-template-columns: 1fr;
   }
@@ -1946,9 +1983,20 @@ a.status:hover .icon {
     color: var(--accent);
   }
 
-  .badge,
-  .card-index {
+  .badge {
     color: var(--txt-3);
+  }
+
+  /* the cover art is decoration: on paper it is an empty box with a pale
+     icon (backgrounds don't print), and it nearly doubles the page count */
+  .cover {
+    display: none;
+  }
+
+  /* without the cover, the side-by-side cards stack back into a column */
+  .featured,
+  .work-grid > .card:last-child:nth-child(3n + 1) {
+    display: flex;
   }
 
   .card,
