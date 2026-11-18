@@ -11,6 +11,7 @@ Hosted on GitHub Pages from `main`; the custom domain is set in `CNAME`.
 | Path                           | What it is                                                      |
 | ------------------------------ | --------------------------------------------------------------- |
 | `index.html`                   | The portfolio page                                              |
+| `cs/index.html`                | The same page in Czech, at `/cs/` (uses absolute paths)         |
 | `styles.css`                   | Styles for every page                                           |
 | `privacy-policy-<app>.html`    | Privacy policy of an app, English                               |
 | `privacy-policy-<app>-cs.html` | The same policy in Czech                                        |
@@ -18,6 +19,7 @@ Hosted on GitHub Pages from `main`; the custom domain is set in `CNAME`.
 | `fonts/`                       | Self-hosted Inter and JetBrains Mono (SIL OFL, licences inside)  |
 | `og-image.png`                 | 1200×630 preview used when the site is shared                   |
 | `og-image.html`                | Source of `og-image.png` (not published)                        |
+| `og-image-cs.png`, `.html`     | The Czech preview, used by `/cs/`, and its source               |
 | `google9c6c3f1645c36096.html`  | Google Search Console verification — keep it                    |
 | `_config.yml`                  | Keeps repository-only files off the published site (Jekyll)     |
 
@@ -44,10 +46,20 @@ When adding a policy:
 3. Add both URLs to `sitemap.xml`.
 4. Bump "Last updated" in both languages whenever the policy text changes,
    and the page's `<lastmod>` in `sitemap.xml` with it.
-5. Once the app is live, add it to `index.html` and update the counts (meta
-   description, Open Graph, hero stats, About, services). They are baked
-   into `og-image.png` too: change them in `og-image.html` and render it
-   again (below). Bump the homepage `<lastmod>` in `sitemap.xml`.
+5. Once the app is live, add it to `index.html` and `cs/index.html` and
+   update the counts (meta description, Open Graph, hero stats, About,
+   services). They are baked into both preview images too: change them in
+   `og-image.html` and `og-image-cs.html` and render both again (below).
+   Bump both homepages' `<lastmod>` in `sitemap.xml`.
+
+## Czech homepage
+
+`cs/index.html` is a translation of `index.html`, so every change to the
+English page needs its Czech twin. It sits one folder down, so its local
+paths are absolute (`/styles.css`, `/profile.jpeg`). Apps go by their Czech
+App Store names (`Šachy offline: hra pro dva`, `Solitér: Pasiáns
+Solitaire`), and the Czech text keeps one-letter prepositions on the next
+word with `&nbsp;` (`v&nbsp;Reactu`). The Czech policies link back to `/cs/`.
 
 ## Open Graph image
 
@@ -59,6 +71,8 @@ styles, fonts and photo. With the local preview running (below):
   --hide-scrollbars --window-size=1200,630 --virtual-time-budget=3000 \
   --screenshot=og-image.png http://localhost:8000/og-image.html
 ```
+
+The Czech one the same way, from `og-image-cs.html` to `og-image-cs.png`.
 
 ## Local preview
 
